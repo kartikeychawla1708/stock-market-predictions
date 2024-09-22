@@ -29,5 +29,4 @@ WATSONX_PROJECT_ID = 'your_project_id'
 ## Installation
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/stock-prediction-app](https://github.com/kartikeychawla1708/stock-market-predictions.git
-   cd stock-prediction-app
+   git clone https://github.com/yourusername/stock-prediction-app](https://github.com/kartikeychawla1708/stock-market-predictions.git](https://github.com/kartikeychawla1708/stock-market-predictions.git
