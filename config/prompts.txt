@@ -1,0 +1,27 @@
+
+sentiment_prompt |
+  Perform sentiment analysis on the following text: "{{input_text}}"
+
+stock_prediction_prompt |
+  Predict the high and low stock prices for {{symbol}} for the next 7 days based on the following data and news influence: "{{news_influence}}"
+  
+  You will be provided with a series of high and low stock prices over the last 180 days. Your task is to predict the high and low prices for the next 7 days. Use the data provided, but do not copy from the past values. Focus on predicting the stock prices for future dates.
+
+  Input Format:
+  Date:      HIGH        LOW
+  Date 180:   180 high    180 low
+  ...
+  Date 1:     1 high      1 low
+
+  Please predict the following:
+
+  Date:      HIGH        LOW
+  Date 181:   Predicted high    Predicted low
+  Date 182:   Predicted high    Predicted low
+  Date 183:   Predicted high    Predicted low
+  Date 184:   Predicted high    Predicted low
+  Date 185:   Predicted high    Predicted low
+  Date 186:   Predicted high    Predicted low
+  Date 187:   Predicted high    Predicted low
+
+  **Important: Provide only the numeric values for the high and low prices for the next 7 days. Do not return any additional text, explanations, or examples. Only return the numbers as shown in the input format.**
