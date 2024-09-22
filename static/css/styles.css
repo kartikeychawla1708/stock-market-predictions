@@ -1,0 +1,157 @@
+/* Resets to ensure consistent styling */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #1a1a2e; /* Dark background for better contrast */
+    color: #ffffff; /* Light text color for readability */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header, footer {
+    width: 100%;
+    background-color: #16213e; /* Dark blue */
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    position: fixed;
+    z-index: 1000;
+}
+
+header {
+    top: 0;
+}
+
+footer {
+    bottom: 0;
+}
+
+.container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Align items from the top */
+    padding: 100px 20px 20px; /* Adjusted padding for top, sides and bottom */
+    width: 100%; /* Full width */
+    margin-top: 60px; /* Margin to avoid overlap with the fixed header */
+}
+
+.selection-area {
+    width: 100%; /* Full width */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+#companyNews, #companyList, #sentimentInput, button {
+    width: 300px; /* Uniform width for all input elements */
+    margin: 10px auto; /* Centralize and add margin */
+    text-align: center; /* Center text for dropdown */
+}
+
+#companyList {
+    text-align-last: center; /* Center the text inside the dropdown across browsers */
+}
+
+#companyNews {
+    display: flex;
+    justify-content: center; /* Center contents horizontally */
+    align-items: center; /* Align items vertically */
+    width: 100%; /* Full width to match other elements */
+}
+
+#companyNews label {
+    margin-right: 10px; /* Space between label and checkbox */
+}
+
+input[type="checkbox"] {
+    margin-top: 0; /* Align top of checkbox with text */
+}
+
+input[type="text"], select {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    color: #333;
+    font-size: 16px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input[type="text"]:focus, select:focus {
+    border-color: #007BFF;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    outline: none;
+}
+
+button {
+    padding: 12px;
+    border-radius: 5px;
+    background-color: #007BFF;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.charts-area {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin: 20px auto;
+    max-width: 1800px;
+    width: 100%;
+}
+
+.chart-container {
+    width: 100%;
+    height: 400px;
+}
+
+canvas {
+    width: 100%;
+    height: 100%;
+}
+
+#loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1500;
+}
+
+.loader-icon {
+    border: 16px solid #f3f3f3;
+    border-top: 16px solid #3498db;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
