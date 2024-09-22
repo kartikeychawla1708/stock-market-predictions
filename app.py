@@ -16,9 +16,9 @@ CORS(app)
 app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
 
 # IBM Watsonx credentials and API URL
-WATSONX_API_KEY = 'Sw-FBmmPvG-AeLumgpBIgBJtsF8kLCwUGx-8CiltffFU'
+WATSONX_API_KEY = '#' -> Add your API Key here 
 WATSONX_MODEL_ID = 'ibm/granite-13b-chat-v2'
-WATSONX_PROJECT_ID = 'fcf6a4f6-e88d-4e78-b032-48bb0fcfa588'
+WATSONX_PROJECT_ID = '#' -> Add your Project ID here
 WATSONX_API_URL = 'https://us-south.ml.cloud.ibm.com/ml/v1/text/generation?version=2023-05-29'
 
 # Load prompts from config file
@@ -108,7 +108,7 @@ def adjust_predictions_based_on_sentiment(predicted_highs, predicted_lows, senti
     return adjusted_highs, adjusted_lows
 
 def get_stock_data(symbol):
-    ALPHA_VANTAGE_API_KEY = '0WFJ8X8IJ1OLF4C0'
+    ALPHA_VANTAGE_API_KEY = '0WFJ8X8IJ1OLF4C0' //temp API key for IBM's review only
     params = {
         'function': 'TIME_SERIES_DAILY',
         'symbol': symbol,
