@@ -17,6 +17,15 @@ This project is a web application that leverages IBM Watsonx.AI for predicting s
 - **Frontend**: HTML, JavaScript, Chart.js
 - **AI Services**: IBM Watsonx.AI
 
+## Install Dependencies
+= **pip install -r requirements.txt
+
+## Add credentials and make sure you use the correct model ID
+WATSONX_API_KEY = 'your_api_key'
+WATSONX_MODEL_ID = 'your_model_id'
+WATSONX_PROJECT_ID = 'your_project_id'
+
+
 ## Installation
 1. Clone the repository:
    ```bash
