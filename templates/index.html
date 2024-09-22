@@ -1,1 +1,65 @@
-te
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Market Predictions</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='ico/favicon.ico') }}">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <h1>DataBulls Stock Predictions</h1>
+    </header>
+    <div class="container">
+        <div class="selection-area">
+            <select id="companyList" onchange="handleCompanySelection()">
+                <option value="">Select the Stock to Predict</option>
+                <option value="AAPL">Apple</option>
+                <option value="AMZN">Amazon</option>
+                <option value="GOOGL">Google</option>
+                <option value="IBM">IBM</option>
+                <option value="INTC">Intel</option>
+                <option value="META">Meta</option>
+                <option value="MSFT">Microsoft</option>
+                <option value="NFLX">Netflix</option>
+                <option value="NVDA">NVIDIA</option>
+                <option value="TSLA">Tesla</option>
+            </select>
+            <div id="companyNews" style="display:none;">
+                <label for="newsCheckbox">Has there been any news about <span id="selectedCompany">this stock</span>?</label>
+                <input type="checkbox" id="newsCheckbox" onchange="toggleSentimentInput()">
+            </div>
+            <div id="sentimentInput" style="display: none;">
+                <label for="sentimentText">Enter the media update about <span id="selectedCompany">this stock</span>:</label>
+                <input type="text" id="sentimentText" placeholder="Type your sentiment here...">
+            </div>
+            <button onclick="makePrediction()">Make Prediction</button>
+        </div>
+        <div id="loader" style="display: none;">
+            <div class="loader-icon"></div>
+        </div>
+        <div class="charts-area">
+            <div class="chart-container">
+                <canvas id="actualHighChart"></canvas>
+            </div>
+            <div class="chart-container">
+                <canvas id="actualLowChart"></canvas>
+            </div>
+            <div class="chart-container">
+                <canvas id="predictedHighChart"></canvas>
+            </div>
+            <div class="chart-container">
+                <canvas id="predictedLowChart"></canvas>
+            </div>
+        </div>                              
+    </div>
+    <footer>
+        <p>&copy; 2024 DataBulls. Powered by IBM WatsonX.AI</p>
+    </footer>
+
+    <!-- Include external JS -->
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+</body>
+</html>
