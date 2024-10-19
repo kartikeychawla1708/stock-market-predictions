@@ -108,7 +108,7 @@ def adjust_predictions_based_on_sentiment(predicted_highs, predicted_lows, senti
     return adjusted_highs, adjusted_lows
 
 def get_stock_data(symbol):
-    ALPHA_VANTAGE_API_KEY = '0WFJ8X8IJ1OLF4C0' //temp API key for IBM's review only
+    ALPHA_VANTAGE_API_KEY = '' //Create a free API key from Alphavantage portal
     params = {
         'function': 'TIME_SERIES_DAILY',
         'symbol': symbol,
